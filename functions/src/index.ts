@@ -32,8 +32,7 @@ const execute = (req: express.Request, res: express.Response, sql1: string, sql2
     to = moment().format("YYYY-MM-DD HH:mm:ss");
   } else {
     const time = setTime(timeParam);
-    sql = `${sql1}
-    WHERE date BETWEEN UNIX_TIMESTAMP() - (${n}) * (${time}) AND UNIX_TIMESTAMP() - (${n}-1) * (${time}) ${sql2}`;
+    sql = `${sql1} WHERE date BETWEEN UNIX_TIMESTAMP() - (${n}) * (${time}) AND UNIX_TIMESTAMP() - (${n}-1) * (${time}) ${sql2}`;
     const fromUnix = n * time;
     const toUnix = (n - 1) * time;
     from = moment().subtract(fromUnix, "seconds").format("YYYY-MM-DD HH:mm:ss");
@@ -85,7 +84,7 @@ const app = express();
 
 app.get("/tracksplayed/:time/:offset", (req: express.Request, res: express.Response) => {
   const sql1 = "SELECT track, album, artist, duration, day, FROM_UNIXTIME(date) AS date, tags FROM last";
-  const sql2 = "ORDER BY date DESC";
+  const sql2 = "";
   execute(req, res, sql1, sql2, "Tracks Played");
 });
 

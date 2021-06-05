@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Welcome to Firebase Hosting</title>
+    <title>Your Music</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/tailwind.css" />
@@ -20,7 +20,6 @@
   </head>
   <body>
     <div>
-      <!-- This example requires Tailwind CSS v2.0+ -->
       <div class="relative bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
           <div
@@ -38,6 +37,7 @@
             </div>
             <div class="-mr-2 -my-2 md:hidden">
               <button
+                id="mobile-open"
                 type="button"
                 class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 aria-expanded="false"
@@ -368,21 +368,19 @@
           -->
               </div>
             </nav>
-            <div
-              class="hidden md:flex items-center justify-end md:flex-1 lg:w-0"
-            >
+            <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <a
                 href="#"
                 style="background-color: #191414;"
                 class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-bold text-white hover:bg-indigo-700"
               >
+              Connect to
                 <img
-                  src="img/spotify-logo.svg"
-                  alt="spotify-logo"
+                  src="img/last-title.png"
+                  alt="last.fm-logo"
                   srcset=""
-                  class="max-h-5 mr-2"
+                  class="max-h-5 mx-2.5 pb-0.5"
                 />
-                Login to Spotify
               </a>
             </div>
           </div>
@@ -398,7 +396,7 @@
       From: "opacity-100 scale-100"
       To: "opacity-0 scale-95"
   -->
-        <div
+        <div id="mobile"
           class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
         >
           <div
@@ -415,6 +413,7 @@
                 </div>
                 <div class="-mr-2">
                   <button
+                    id="mobile-close"
                     type="button"
                     class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                   >
@@ -614,16 +613,11 @@
               <div>
                 <a
                   href="#"
-                  class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                  class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-black hover:bg-gray-800"
                 >
-                  Sign up
+                  Connect to 
+                  <img src="img/last-title.png" alt="last.fm-title" class="max-h-5 mx-2.5 pl-0.5">
                 </a>
-                <p class="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?
-                  <a href="#" class="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
               </div>
             </div>
           </div>
@@ -632,30 +626,30 @@
     </div>
     <br />
     
-    <div class="flex flex-wrap mx-auto shadow-2xl max-w-7xl p-16 gap-x-4 bg-gray-100 rounded-lg">
-      <div class="w-full p-2 text-center font-large text-2xl">
+     <div class="flex flex-wrap mx-auto shadow-2xl max-w-7xl p-16 gap-x-4 bg-gray-100 rounded-lg">
+     <div class=" p-2 font-large text-2xl mb-20 mr-16">
         <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-          <!-- Back card -->
-          <div class="absolute inset-0 bg-gradient-to-r bg-blue-400 to-light-blue-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+          <div class="absolute inset-0 bg-gradient-to-r bg-red-400 to-light-red-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
           <div class="relative px-4 bg-white shadow-lg sm:rounded-2xl sm:p-20">
-            <div class="max-w-md mx-auto flex-grow">
-              <div class="font-bold text-2xl">Week 1</div>
+            <div class="max-w-md ml-10 flex-grow">
+              <div>
+                <span class="font-bold text-2xl" id="week_scrobbles">450</span> Scrobbles -
+                <span class="font-medium text-lg text-gray-600"><span class="font-medium text-xl text-gray-400" id="week_hours">24</span> Hours</span> 
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <button onclick="daily_plays(dOffset++)"></button>
       <br>
       <div class="max-w-xl flex-1 shadow-2xl p-5 rounded-xl bg-gray-200">
         <canvas id="chart-1" class="flex-1"></canvas>
       </div>
-      <div class="max-w-xl flex-1">
+      <!-- <div class="max-w-xl flex-1">
         <canvas id="chart-2" class="flex-1"></canvas>
-      </div>
+      </div> -->
+    </div> 
 
-      <!-- <canvas id="chart-3" class="flex-1"></canvas>  -->
-    </div>
-
-    <!-- update the version number as needed -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="/__/firebase/8.6.4/firebase-app.js"></script>
     <script defer src="/__/firebase/8.6.4/firebase-functions.js"></script>
@@ -666,6 +660,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script type="module" src="/js/static.js"></script>
+    <script defer src="/js/static.js"></script>
   </body>
 </html>

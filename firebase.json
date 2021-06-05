@@ -6,6 +6,7 @@
     ]
   },
   "hosting": {
+    "site": "lastfm-breakdown",
     "public": "static",
     "ignore": [
       "firebase.json",

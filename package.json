@@ -1,0 +1,30 @@
+{
+  "name": "firebase",
+  "version": "1.0.0",
+  "description": "An analysis of Spotify Scrobbles with data gathered from Last.fm",
+  "main": "main.js",
+  "scripts": {
+    "test": "firebase serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadby100/last-spotify.git"
+  },
+  "keywords": [
+    "spotify",
+    "last",
+    "lastfm"
+  ],
+  "author": "Ahmad",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ahmadby100/last-spotify/issues"
+  },
+  "homepage": "https://github.com/ahmadby100/last-spotify#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.6",
+    "chart.js": "^3.3.2",
+    "postcss": "^8.3.0",
+    "tailwindcss": "^2.1.4"
+  }
+}

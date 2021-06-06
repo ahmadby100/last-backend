@@ -15,7 +15,6 @@ conn.connect();
 export const queryF = (query: string, callback: (resd: mysql.Query) => void, errorCallback: (err: Error) => unknown): void => {
   conn.query(query, (err: Error, resd: mysql.Query) => {
     if (err) return errorCallback(err);
-    callback(resd);
-    return;
+    return callback(resd);
   });
 };

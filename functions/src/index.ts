@@ -55,6 +55,8 @@ const execute = (req: express.Request, res: express.Response, sql1: string, sql2
         results: resd,
       });
     }
+  }, (err) => {
+    res.status(500).send({error: err});
   });
 };
 

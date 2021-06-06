@@ -60,7 +60,7 @@
 
         <div class="relative z-10 inline-flex items-center space-x-3 md:ml-5 lg:justify-end">
             <span class="inline-flex rounded-md shadow-sm  origin-center hover:skew-x-2 delay-150">
-                <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-black border rounded-md shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-800">
+                <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-base font-bold leading-6 text-white whitespace-no-wrap bg-black border rounded-md shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-800">
                     <img src="img/spotify-logo.svg" alt="Spotify Logo" class="max-h-6 mr-2.5">
                     Connect to Spotify
                 </a>
@@ -80,14 +80,6 @@
 <!-- Section 2 -->
 <section class="w-full bg-white pt-7 pb-7 md:pt-20 md:pb-24">
     <div class="box-border flex flex-col items-center content-center px-8 mx-auto leading-6 text-black border-0 border-gray-300 border-solid md:flex-row max-w-7xl lg:px-16">
-
-        <!-- Image -->
-        <div class="box-border relative w-full max-w-md px-4 mt-5 mb-4 -ml-5 text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none lg:mb-0 md:w-1/2 xl:pl-10">
-            <div class="max-w-xl flex-1 shadow-2xl p-5 rounded-xl bg-gray-200">
-                <canvas id="chart-1" class="flex-1"></canvas>
-              </div>
-        </div>
-
         <!-- Content -->
         <div class="box-border order-first text-black border-solid md:w-1/2 md:pl-10 md:order-none w-1/2">
             <h2 class="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
@@ -96,10 +88,11 @@
                     <div class="relative px-4 bg-white shadow-lg sm:rounded-2xl sm:p-20">
                       <div class="max-w-md ml-10 flex-grow">
                         <div>
-                          <span class="font-bold text-2xl" id="week_scrobbles">450</span> Scrobbles -
-                          <span class="font-medium text-lg text-gray-600"><span class="font-medium text-xl text-gray-600" id="week_hours">24</span> Hours</span> 
-                          <span class="font-bold text-md text-gray-400" id="prev_week_scrobbles">450</span>
-                          <span class="font-medium text-sm text-gray-600"><span class="font-medium text-xl text-gray-400" id="prev_week_hours">24</span> Hours</span> 
+                          <span class="font-bold text-3xl ml-3" id="week_scrobbles">450</span> Scrobbles <br>
+                          <span class="font-medium text-lg text-gray-600 ml-3">Listened to a total of <span class="font-medium text-lg text-gray-600" id="week_hours">24</span> Hours</span> 
+                          <span class="text-cyan-500">Compared to <br></span>
+                          <span class="font-bold text-md text-gray-400 ml-3" id="prev_week_scrobbles">450</span><br>
+                          <span class="font-medium text-sm text-gray-600 ml-3">Listened to a total of <span class="font-medium text-sm text-gray-400" id="prev_week_hours">24</span> Hours</span> 
                         </div>
                       </div>
                     </div>
@@ -120,6 +113,14 @@
             </ul> -->
         </div>
         <!-- End  Content -->
+
+        <!-- Image -->
+        <div class="box-border relative w-full max-w-md px-4 mt-5 mb-4 -ml-5 text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none lg:mb-0 md:w-1/2 xl:pl-10">
+            <div class="max-w-xl flex-1 shadow-2xl p-5 rounded-xl bg-gray-200">
+                <canvas id="chart-1" class="flex-1"></canvas>
+              </div>
+        </div>
+
     </div>
     <div class="box-border flex flex-col items-center content-center px-8 mx-auto mt-2 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl lg:px-16">
 

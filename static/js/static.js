@@ -151,7 +151,7 @@ const daily_plays = (offset,period) => {
             prev_daily_scrobbles.sun++;
           }
           $("#week_scrobbles").html(res.results.length);
-          $("#prev_week_scrobbles").html(resd.results.length + " Scrobbles - ");
+          $("#prev_week_scrobbles").html(resd.results.length + " Scrobbles ");
           const chart_1_data = {
             datasets: [
               {

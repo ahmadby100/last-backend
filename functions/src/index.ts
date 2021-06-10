@@ -2,8 +2,11 @@
 import * as functions from "firebase-functions";
 import express = require("express");
 import moment = require("moment");
+import cors = require("cors");
+
 
 import {queryF} from "./db";
+
 
 // Error Function
 const sendError = (param: string, errType: string, res: express.Response) => {
@@ -84,10 +87,12 @@ const setTime = (period: string) => {
 // Creating Express App
 const app = express();
 
+app.use(cors({origin: true}));
+
 app.get("/tracksplayed/:time/:offset", (req: express.Request, res: express.Response) => {
-  const sql1 = "SELECT track, album, artist, duration, day, FROM_UNIXTIME(date) AS date, tags FROM last";
+  const sql1 = "SELECT track, album, artist, duration, DAYNAME(FROM_UNIXTIME(date)) AS weekday, FROM_UNIXTIME(date) AS date, tags FROM last";
   const sql2 = "";
-  execute(req, res, sql1, sql2, "Tracks Played");
+  execute(req, res, sql1, sql2, "All Tracks Played");
 });
 
 app.get("/unique/:type/:time/:offset", (req: express.Request, res: express.Response) => {
@@ -108,10 +113,11 @@ app.get("/unique/:type/:time/:offset", (req: express.Request, res: express.Respo
 
 app.get("/top/:type/:time/:offset", (req: express.Request, res: express.Response) => {
   const type = req.params.type;
+  let imgType;
   if (!types.includes(type)) sendError("type", type, res);
-
-  const sql1 = `SELECT COUNT(track) AS plays,${type} FROM last`;
-  const sql2 = `GROUP BY ${type} ORDER BY plays DESC`;
+  (type == "album" || type == "track") ? imgType = "album_image" : imgType = "artist_image";
+  const sql1 = `SELECT COUNT(track) AS plays,${type}, artist,${imgType}  FROM last`;
+  const sql2 = ` GROUP BY ${type} ORDER BY plays DESC`;
   execute(req, res, sql1, sql2, `Top ${type}s`);
 });
 
@@ -124,25 +130,44 @@ app.get("/duration/:time/:offset", (req: express.Request, res: express.Response)
 app.get("/plays/:time/:offset", (req: express.Request, res: express.Response) => {
   let avg;
   let desc;
-  if (req.query.avg == "7" && req.params.time == "week") {
-    avg = `, COUNT(track)/${req.query.avg} AS daily_avg_plays `;
+  if (req.params.time == "week") {
+    avg = ", COUNT(track)/7 AS avg_plays ";
     desc = " & Daily Average";
-  } else if (req.query.avg == "54" && req.params.time == "year") {
-    avg = `, COUNT(track)/${req.query.avg} AS weekly_avg_plays `;
-    desc = " & Weekly Average (in a year)";
-  } else if (req.query.avg == "4" && req.params.time == "month") {
-    avg = `, COUNT(track)/${req.query.avg} AS weekly_avg_plays `;
+  } else if (req.params.time == "month") {
+    avg = ", COUNT(track)/30 AS avg_plays ";
     desc = " & Weekly Average (in a month)";
-  } else if (req.query.avg == "12" && req.params.time == "year") {
-    avg = `, COUNT(track)/${req.query.avg} AS monthly_avg_plays `;
+  } else if (req.params.time == "year") {
+    avg = ", COUNT(track)/12 AS avg_plays ";
     desc = " & Monthly Average";
   } else {
-    avg = " ";
-    desc = "";
+    avg = ", COUNT(track)/7 AS avg_plays ";
+    desc = " & All Time Daily Average";
   }
   const sql1 = `SELECT COUNT(track) AS plays${avg} FROM last`;
   const sql2 = "";
   execute(req, res, sql1, sql2, `Total Number of Plays${desc}`);
+});
+
+app.get("/activehour/:time/:offset", (req: express.Request, res: express.Response) => {
+  const sql1 = "SELECT COUNT(*) AS plays, HOUR(FROM_UNIXTIME(date)) AS hour FROM last ";
+  const sql2 = "GROUP BY hour ORDER BY plays DESC";
+  execute(req, res, sql1, sql2, "Plays By Hour");
+});
+
+app.get("/totalnew/:type/:time/:offset", (req: express.Request, res: express.Response) => {
+  const type = req.params.type;
+  const sql1 = `SELECT count(${type}) plays FROM last`;
+  const sql2 = `AND date IN (SELECT min(date) FROM last GROUP BY ${type})`;
+  execute(req, res, sql1, sql2, `New ${type}s discovered`);
+});
+
+app.get("/new/:type/:time/:offset", (req: express.Request, res: express.Response) => {
+  const type = req.params.type;
+  const stype = (type == "track") ? "album" : type;
+
+  const sql1 = `SELECT ${type} as rtype, artist, ${stype}_image as img FROM last`;
+  const sql2 = `AND date IN (SELECT min(date) FROM last GROUP BY ${type})`;
+  execute(req, res, sql1, sql2, `New ${type}s discovered`);
 });
 
 exports.app = functions.https.onRequest(app);

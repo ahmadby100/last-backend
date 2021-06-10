@@ -11,8 +11,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Open+Sans&display=swap');
       * {
-        /*font-family: "Open Sans", sans-serif;*/
-        font-family: 'Barlow', sans-serif;
+        font-family: "Open Sans", sans-serif;
       }
       #time_period {
           font-family: 'Barlow','Open Sans', sans-serif;
@@ -77,7 +76,7 @@
 </center>
 
 <!-- Section 1 -->
-<section class="text-gray-600 body-font pt-7 pb-7 md:pt-20 md:pb-24 max-w-7xl mx-auto">
+<section class="text-gray-600 body-font pt-7 pb-7 md:pt-20 md:pb-24">
   <div class="container px-5 py-24 mx-auto flex flex-wrap">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 lg:w-1/2 md:w-full">
@@ -88,8 +87,8 @@
             </svg>
           </div>
           <div class="flex-grow">
-            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">This Week's Scrobbles</h2>
-            <p class="leading-relaxed text-base">You played 555 Tracks this week</p>
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Shooting Stars</h2>
+            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
             <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -122,14 +121,11 @@
 </section>
 
 <!-- Section 2 -->
-<section class="w-full bg-white pt-7 pb-7 md:pt-20 md:pb-24 ">
+<section class="w-full bg-white pt-7 pb-7 md:pt-20 md:pb-24">
   <!-- Content -->    
-    <h1 class="sm:text-3xl text-3xl text-bold text-center">Listening Week</h1>
+    <h1 class="text-4xl te text-bold ml-10 sm:ml-32 md:ml-52">Listening Week</h1>
     <br>
-    <hr class="w-20 mx-auto border-2 border-blue-400 bg-blue-400 transform transition-all duration-300 ease-in-out hover:scale-x-150">
-    <br>
-    <h1 class="text-lg text-gray-500 text-center">You listened the most on <span id="most_listens"></span>s</h1>
-    <br>
+    <h1 class="text-lg text-gray-500 ml-10 sm:ml-32 md:ml-52" style="font-family: 'Barlow', sans-serif;">You Listened Most on <span id="most_listens"></span></h1>
     <div class="box-border flex flex-col items-center content-center px-8 mx-auto mt-2 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl lg:px-16">
         <canvas id="chart-1" class="flex-1"></canvas>        
       </div>
@@ -139,11 +135,8 @@
 
 
 <!-- Section 3 -->
-<section class="text-gray-600 body-font max-w-7xl mx-auto text-center">
-  <h1 class="px-5 font-medium text-3xl mb-2 ">Top Music</h1>
-  <br>
-  <hr class="w-20 mx-auto border-2 border-blue-400 bg-blue-400 transform transition-all duration-300 ease-in-out hover:scale-x-150">
-    <div class="container px-5 pt-24 pb-5 mx-auto text-left">
+<section class="text-gray-600 body-font max-w-7xl mx-auto">
+    <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-wrap -m-4">
         <div class="p-4 md:w-1/3">
           <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-lg">
@@ -201,131 +194,95 @@
       </div>
       <div class="flex flex-wrap -m-4">
         <div class="p-4 w-full md:w-1/3">
-          <!-- Artist -->
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-            <span class="inline-flex pr-3 text-sm font-medium">2</span>
-            <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-              <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md"  id="2_artist_img">
+          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col items-center justify-center">
+            <span class="inline-flex items-center justify-center pr-4 font-semibold">2</span>
+            <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
+              <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md">
             </div>
-            <div class="flex-grow">
-              <h2 class="text-gray-900 text-sm font-semibold mb-2" id="2_artist">Sweet Trip</h2>
-              
-            </div>
-          </div>
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-            <span class="inline-flex pr-3 text-sm font-medium">3</span>
-            <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-              <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md" id="3_artist_img">
-            </div>
-            <div class="flex-grow">
-              <h2 class="text-gray-900 text-sm font-semibold mb-2" id="3_artist">Sweet Trip</h2>
-              
+            <div class="flex-grow items-center justify-items-center">
+              <h2 class="text-gray-900 text-sm font-semibold mb-2">Sweet Trip</h2>
+              <!-- <p class="leading-none text-xs font-bold">Sweet Trips</p> -->
             </div>
           </div>
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-            <span class="inline-flex pr-3 text-sm font-medium">4</span>
-            <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-              <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md" id="4_artist_img">
-            </div>
-            <div class="flex-grow">
-              <h2 class="text-gray-900 text-sm font-semibold mb-2" id="4_artist">Sweet Trip</h2>
-              
+          <div class="h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5">
+            <div class="pt-4 pb-3 px-4 items-center inline-block">
+              <h1 class="text-sm font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline">3</h1>
+              <img src="https://i.scdn.co/image/" alt="" class="h-16 w-16 object-cover object-center items-center rounded-lg inline" id="3_artist_img">
+              <h1 class="text-xs font-semibold text-gray-900 mb-0.5 mt-1.5 ml-5 inline" id="3_artist"></h1>
             </div>
           </div>
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-            <span class="inline-flex pr-3 text-sm font-medium">5</span>
-            <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-              <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md" id="5_artist_img">
+          <div class="h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5">
+            <div class="pt-4 pb-3 px-4 items-center inline-block">
+              <h1 class="text-sm font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline">4</h1>
+              <img src="https://i.scdn.co/image/" alt="" class="h-16 w-16 object-cover object-center items-center rounded-lg inline" id="4_artist_img">
+              <h1 class="text-xs font-semibold text-gray-900 mb-0.5 mt-1.5 ml-5 inline" id="4_artist"></h1>
             </div>
-            <div class="flex-grow">
-              <h2 class="text-gray-900 text-sm font-semibold mb-2" id="5_artist">Sweet Trip</h2>
-              
+          </div>
+          <div class="h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5">
+            <div class="pt-4 pb-3 px-4 items-center inline-block">
+              <h1 class="text-sm font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline">5</h1>
+              <img src="https://i.scdn.co/image/" alt="" class="h-16 w-16 object-cover object-center items-center rounded-lg inline" id="5_artist_img">
+              <h1 class="text-xs font-semibold text-gray-900 mb-0.5 mt-1.5 ml-5 inline" id="5_artist"></h1>
             </div>
           </div>
         </div>
         <div class="p-4 w-full md:w-1/3">
-          <!-- Album -->
-            <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-              <span class="inline-flex pr-3 text-sm font-medium">2</span>
-              <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-                <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md" id="2_album_img">
-              </div>
-              <div class="flex-grow">
-                <h2 class="text-gray-900 text-sm font-semibold mb-2" id="2_album">Ceres & Calypso in the Deep Time</h2>
-                <p class="leading-none text-xs font-bold" id="2_album_artist">Candy Claws</p>
-              </div>
+          <div class="h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5">
+            <div class="pt-4 pb-3 px-4 items-center inline-block">
+              <h1 class="text-sm font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline">2</h1>
+              <img src="https://i.scdn.co/image/" alt="" class="h-16 w-16 object-cover object-center items-center rounded-lg inline" id="2_album_img">
+              <h1 class="text-xs font-semibold text-gray-900 mb-0.5 mt-1.5 ml-5 inline" id="2_album"></h1>
             </div>
-            <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-              <span class="inline-flex pr-3 text-sm font-medium">3</span>
-              <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-                <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md" id="3_album_img">
-              </div>
-              <div class="flex-grow">
-                <h2 class="text-gray-900 text-sm font-semibold mb-2" id="3_album">A Tiny House, in Secret Speeches, Polar Equals</h2>
-                <p class="leading-none text-xs font-bold" id="3_album_artist">Sweet Trip</p>
-              </div>
+          </div>
+          <div class="h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5">
+            <div class="pt-4 pb-3 px-4 items-center inline-block">
+              <h1 class="text-sm font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline">3</h1>
+              <img src="https://i.scdn.co/image/" alt="" class="h-16 w-16 object-cover object-center items-center rounded-lg inline" id="3_album_img">
+              <h1 class="text-xs font-semibold text-gray-900 mb-0.5 mt-1.5 ml-5 inline" id="3_album"></h1>
             </div>
-            <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-              <span class="inline-flex pr-3 text-sm font-medium">4</span>
-              <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-                <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md" id="4_album_img">
-              </div>
-              <div class="flex-grow">
-                <h2 class="text-gray-900 text-sm font-semibold mb-2" id="4_album">Sweet Trip</h2>
-                <p class="leading-none text-xs font-bold" id="4_album_artist">Sweet Trip</p>
-              </div>
+          </div>
+          <div class="h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5">
+            <div class="pt-4 pb-3 px-4 items-center inline-block">
+              <h1 class="text-sm font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline">4</h1>
+              <img src="https://i.scdn.co/image/" alt="" class="h-16 w-16 object-cover object-center items-center rounded-lg inline" id="4_album_img">
+              <h1 class="text-xs font-semibold text-gray-900 mb-0.5 mt-1.5 ml-5 inline" id="4_album"></h1>
             </div>
-            <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-              <span class="inline-flex pr-3 text-sm font-medium">5</span>
-              <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-                <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md" id="5_album_img">
-              </div>
-              <div class="flex-grow">
-                <h2 class="text-gray-900 text-sm font-semibold mb-2" id="5_album">Sweet Trip</h2>
-                <p class="leading-none text-xs font-bold" id="5_album_artist">Sweet Trip</p>
-              </div>
+          </div>
+          <div class="h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5">
+            <div class="pt-4 pb-3 px-4 items-center inline-block">
+              <h1 class="text-sm font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline">5</h1>
+              <img src="https://i.scdn.co/image/" alt="" class="h-16 w-16 object-cover object-center items-center rounded-lg inline" id="5_album_img">
+              <h1 class="text-xs font-semibold text-gray-900 mb-0.5 mt-1.5 ml-5 inline" id="5_album"></h1>
             </div>
+          </div>
         </div>
         <div class="p-4 w-full md:w-1/3">
-          <!-- Track -->
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-            <span class="inline-flex pr-3 text-sm font-medium">2</span>
-            <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-              <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md" id="2_track_img">
-            </div>
-            <div class="flex-grow">
-              <h2 class="text-gray-900 text-sm font-semibold mb-2" id="2_track">Ceres & Calypso in the Deep Time</h2>
-              <p class="leading-none text-xs font-bold" id="2_track_artist">Candy Claws</p>
+          <div class="h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5">
+            <div class="pt-4 pb-3 px-4 items-center inline-block">
+              <h1 class="text-sm font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline">2</h1>
+              <img src="https://i.scdn.co/image/" alt="" class="h-16 w-16 object-cover object-center items-center rounded-lg inline" id="2_track_img">
+              <h1 class="text-xs font-semibold text-gray-900 mb-0.5 mt-1.5 ml-5 inline" id="2_track"></h1>
             </div>
           </div>
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-            <span class="inline-flex pr-3 text-sm font-medium">3</span>
-            <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-              <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md" id="3_track_img">
-            </div>
-            <div class="flex-grow">
-              <h2 class="text-gray-900 text-sm font-semibold mb-2" id="3_track">A Tiny House, in Secret Speeches, Polar Equals</h2>
-              <p class="leading-none text-xs font-bold" id="3_track_artist">Sweet Trip</p>
+          <div class="h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5">
+            <div class="pt-4 pb-3 px-4 items-center inline-block">
+              <h1 class="text-sm font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline">3</h1>
+              <img src="https://i.scdn.co/image/" alt="" class="h-16 w-16 object-cover object-center items-center rounded-lg inline whitespace-normal	" id="3_track_img">
+              <h1 class="text-xs font-semibold text-gray-900 mb-0.5 mt-1.5 ml-5 inline" id="3_track"></h1>
             </div>
           </div>
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-            <span class="inline-flex pr-3 text-sm font-medium">4</span>
-            <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-              <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md" id="4_track_img">
-            </div>
-            <div class="flex-grow">
-              <h2 class="text-gray-900 text-sm font-semibold mb-2" id="4_track">Sweet Trip</h2>
-              <p class="leading-none text-xs font-bold" id="4_track_artist">Sweet Trip</p>
+          <div class="h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5">
+            <div class="pt-4 pb-3 px-4 items-center inline-block">
+              <h1 class="text-sm font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline">4</h1>
+              <img src="https://i.scdn.co/image/" alt="" class="h-16 w-16 object-cover object-center items-center rounded-lg inline" id="4_track_img">
+              <h1 class="text-xs font-semibold text-gray-900 mb-0.5 mt-1.5 ml-5 inline " id="4_track"></h1>
             </div>
           </div>
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col mb-3 items-center justify-center">
-            <span class="inline-flex pr-3 text-sm font-medium">5</span>
-            <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
-              <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md" id="5_track_img">
-            </div>
-            <div class="flex-grow">
-              <h2 class="text-gray-900 text-sm font-semibold mb-2" id="5_track">Sweet Trip</h2>
-              <p class="leading-none text-xs font-bold" id="5_track_artist">Sweet Trip</p>
+          <div class="h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5">
+            <div class="pt-4 pb-3 px-4 items-center inline-block">
+              <h1 class="text-sm font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline">5</h1>
+              <img src="https://i.scdn.co/image/" alt="" class="h-16 w-16 object-cover object-center items-center rounded-lg inline" id="5_track_img">
+              <h1 class="text-xs font-semibold text-gray-900 mb-0.5 mt-1.5 ml-5 inline" id="5_track"></h1>
             </div>
           </div>
         </div>
@@ -335,59 +292,43 @@
 
 
 <!-- Section 4 -->
-<section class="text-gray-600 body-font overflow-hidden max-w-7xl mx-auto">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-3xl text-3xl font-medium title-font mb-2 text-gray-900">Highlights</h1>
-      <br>
-      <hr class="w-20 mx-auto border-2 border-blue-400 bg-blue-400 transform transition-all duration-300 ease-in-out hover:scale-x-150">
-    </div>
-    <div class="flex flex-wrap -m-4">
-      <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-        <div class="h-full p-6 rounded-sm border-2 border-blue-100 flex flex-col relative overflow-hidden">
-          <!-- <span class="bg-red-500 text-white px-2 pb-0 pt-2 text-xs absolute right-1.5 top-2 rounded-0 h-10">
-            <img class="w-6  filter invert" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTkxLjI1NSAxOTEuMjU1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxOTEuMjU1IDE5MS4yNTU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGQ9Ik0xNjIuOTI5LDY2LjYxMmMtMi44MTQtMS43NTQtNi41MTQtMC44OTYtOC4yNjcsMS45MTdzLTAuODk1LDYuNTEzLDEuOTE3LDguMjY2YzYuNTQ0LDQuMDgxLDEwLjQ1LDExLjEyMSwxMC40NSwxOC44MzMNCglzLTMuOTA2LDE0Ljc1Mi0xMC40NSwxOC44MzNsLTk4LjQxNyw2MS4zNjVjLTYuOTQzLDQuMzI5LTE1LjM1OSw0LjU0Mi0yMi41MTIsMC41NzNjLTcuMTU0LTMuOTctMTEuNDI1LTExLjIyNS0xMS40MjUtMTkuNDA2DQoJVjM0LjI2MmMwLTguMTgxLDQuMjcxLTE1LjQzNiwxMS40MjUtMTkuNDA2YzcuMTUzLTMuOTY5LDE1LjU2OS0zLjc1NiwyMi41MTIsMC41NzNsNTcuMjkyLDM1LjcyMw0KCWMyLjgxMywxLjc1Miw2LjUxMywwLjg5NSw4LjI2Ny0xLjkxN2MxLjc1My0yLjgxMiwwLjg5NS02LjUxMy0xLjkxNy04LjI2Nkw2NC41MTIsNS4yNDdjLTEwLjY5Ni02LjY2OS0yMy42NjEtNy0zNC42ODUtMC44ODMNCglDMTguODA2LDEwLjQ4LDEyLjIyNiwyMS42NTcsMTIuMjI2LDM0LjI2MnYxMjIuNzNjMCwxMi42MDUsNi41OCwyMy43ODIsMTcuNjAyLDI5Ljg5OGM1LjI1LDIuOTEzLDEwLjkzOSw0LjM2NCwxNi42MTYsNC4zNjQNCgljNi4yNDEsMCwxMi40NjctMS43NTQsMTguMDY4LTUuMjQ3bDk4LjQxNy02MS4zNjVjMTAuMDgyLTYuMjg3LDE2LjEwMS0xNy4xMzMsMTYuMTAxLTI5LjAxNVMxNzMuMDExLDcyLjg5OSwxNjIuOTI5LDY2LjYxMnoiLz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
-          </span> -->
-          <h2 class="text-xs tracking-widest text-blue-400 mb-1 font-semibold">TOTAL SCROBBLES</h2>
-          <h1 class="text-xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none font-bold"><span id="highlights_scrobbles">0</span> Scrobbles</h1>
-          <p class="flex items-center text-sm text-gray-600 mb-2" id="highlights_prev_scrobbles">
-            <span id="highlights_last_scrobbles">vs. 0 (Previous Week) </span>&nbsp;
-            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-400 text-white rounded-full flex-shrink-0 transform rotate-180" id="highlights_scrobble_arrow">
-              <img class="w-2 filter invert" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjQ1MS44NDdweCIgaGVpZ2h0PSI0NTEuODQ3cHgiIHZpZXdCb3g9IjAgMCA0NTEuODQ3IDQ1MS44NDciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ1MS44NDcgNDUxLjg0NzsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTIyNS45MjMsMzU0LjcwNmMtOC4wOTgsMC0xNi4xOTUtMy4wOTItMjIuMzY5LTkuMjYzTDkuMjcsMTUxLjE1N2MtMTIuMzU5LTEyLjM1OS0xMi4zNTktMzIuMzk3LDAtNDQuNzUxDQoJCWMxMi4zNTQtMTIuMzU0LDMyLjM4OC0xMi4zNTQsNDQuNzQ4LDBsMTcxLjkwNSwxNzEuOTE1bDE3MS45MDYtMTcxLjkwOWMxMi4zNTktMTIuMzU0LDMyLjM5MS0xMi4zNTQsNDQuNzQ0LDANCgkJYzEyLjM2NSwxMi4zNTQsMTIuMzY1LDMyLjM5MiwwLDQ0Ljc1MUwyNDguMjkyLDM0NS40NDlDMjQyLjExNSwzNTEuNjIxLDIzNC4wMTgsMzU0LjcwNiwyMjUuOTIzLDM1NC43MDZ6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
-            </span> <span id="highlights_scrobble_percent">0%</span>
-          </p>
-          <!-- <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p> -->
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto max-w-7xl ">
+    <div class="flex flex-wrap -m-4 w-full " id="for_test">
+      <div class="p-4 md:w-1/3 w-full" >
+        <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col">
+          <span class="inline-flex items-center justify-center pr-4 font-semibold">2</span>
+          <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
+            <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md">
+          </div>
+          <div class="flex-grow items-center justify-items-center">
+            <h2 class="text-gray-900 text-sm font-semibold mb-2">Sweet Trip</h2>
+            <p class="leading-none text-xs font-bold">Sweet Trips</p>
+          </div>
         </div>
       </div>
-      <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-        <div class="h-full p-6 rounded-sm border-2 border-blue-100 flex flex-col relative overflow-hidden">
-          <h2 class="text-xs tracking-widest text-blue-400 mb-1 font-semibold">AVG DAILY SCROBBLES</h2>
-          <h1 class="text-xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none font-bold"><span id="highlights_avg_scrobbles">0</span> Scrobbles</h1>
-          <p class="flex items-center text-sm text-gray-600 mb-2" id="highlights_prev_avg" >
-            <span id="highlights_last_avg_scrobbles">vs. 0 (Previous Week)</span>&nbsp;
-            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-400 text-white rounded-full flex-shrink-0 transform rotate-180" id="highlights_avg_arrow">
-              <img class="w-2 filter invert" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjQ1MS44NDdweCIgaGVpZ2h0PSI0NTEuODQ3cHgiIHZpZXdCb3g9IjAgMCA0NTEuODQ3IDQ1MS44NDciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ1MS44NDcgNDUxLjg0NzsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTIyNS45MjMsMzU0LjcwNmMtOC4wOTgsMC0xNi4xOTUtMy4wOTItMjIuMzY5LTkuMjYzTDkuMjcsMTUxLjE1N2MtMTIuMzU5LTEyLjM1OS0xMi4zNTktMzIuMzk3LDAtNDQuNzUxDQoJCWMxMi4zNTQtMTIuMzU0LDMyLjM4OC0xMi4zNTQsNDQuNzQ4LDBsMTcxLjkwNSwxNzEuOTE1bDE3MS45MDYtMTcxLjkwOWMxMi4zNTktMTIuMzU0LDMyLjM5MS0xMi4zNTQsNDQuNzQ0LDANCgkJYzEyLjM2NSwxMi4zNTQsMTIuMzY1LDMyLjM5MiwwLDQ0Ljc1MUwyNDguMjkyLDM0NS40NDlDMjQyLjExNSwzNTEuNjIxLDIzNC4wMTgsMzU0LjcwNiwyMjUuOTIzLDM1NC43MDZ6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
-            </span> <span id="highlights_avg_percent">0%</span>
-          </p>
+      <div class="p-4 lg:w-1/3 md:w-full " >
+        <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col">
+          <span class="inline-flex items-center justify-center pr-4 font-semibold">2</span>
+          <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
+            <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md">
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-gray-900 text-sm font-semibold mb-2">You Will Never Know Why (2021 Remaster)</h2>
+            <p class="leading-none text-xs font-bold" id=>Sweet Trip</p>
+          </div>
         </div>
       </div>
-      <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-        <div class="h-full p-6 rounded-sm border-2 border-blue-100 flex flex-col relative overflow-hidden">
-          <h2 class="text-xs tracking-widest text-blue-400 mb-1 font-semibold">LISTENING TIME</h2>
-          <h1 class="text-xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none font-bold" id="highlights_listen">0 Day, 0 Hours</h1>
-          <p class="flex items-center text-sm text-gray-600 mb-1" id="highlights_prev_listen">
-            <span id="highlights_last_listen">vs. 0 Days, 0 Hours (Last Week) &nbsp;</span>
-            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-400 text-white rounded-full flex-shrink-0 transform rotate-180" id="highlights_listen_arrow">
-              <img class="w-2 filter invert" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjQ1MS44NDdweCIgaGVpZ2h0PSI0NTEuODQ3cHgiIHZpZXdCb3g9IjAgMCA0NTEuODQ3IDQ1MS44NDciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ1MS44NDcgNDUxLjg0NzsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTIyNS45MjMsMzU0LjcwNmMtOC4wOTgsMC0xNi4xOTUtMy4wOTItMjIuMzY5LTkuMjYzTDkuMjcsMTUxLjE1N2MtMTIuMzU5LTEyLjM1OS0xMi4zNTktMzIuMzk3LDAtNDQuNzUxDQoJCWMxMi4zNTQtMTIuMzU0LDMyLjM4OC0xMi4zNTQsNDQuNzQ4LDBsMTcxLjkwNSwxNzEuOTE1bDE3MS45MDYtMTcxLjkwOWMxMi4zNTktMTIuMzU0LDMyLjM5MS0xMi4zNTQsNDQuNzQ0LDANCgkJYzEyLjM2NSwxMi4zNTQsMTIuMzY1LDMyLjM5MiwwLDQ0Ljc1MUwyNDguMjkyLDM0NS40NDlDMjQyLjExNSwzNTEuNjIxLDIzNC4wMTgsMzU0LjcwNiwyMjUuOTIzLDM1NC43MDZ6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
-            </span> <span id="highlights_listen_percent">0%</span> 
-          </p>
-        </div>
-      </div>
-      <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-        <div class="h-full p-6 rounded-sm border-2 border-blue-100 flex flex-col relative overflow-hidden">
-          <h2 class="text-xs tracking-widest text-blue-400 mb-1 font-semibold">MOST ACTIVE HOUR</h2>
-          <h1 class="text-xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none font-bold" id="highlights_hour">00:00</h1>
-          <p class="flex items-center text-sm text-gray-600 mb-2" id="highlights_last_hour"></p>
+      <div class="p-4 lg:w-1/3 md:w-full " >
+        <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-4 sm:flex-row flex-col ">
+          <span class="inline-flex items-center justify-center pr-4 font-semibold">2</span>
+          <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-md bg-gray-300 text-purple-500 flex-shrink-0">
+            <img src="https://i.scdn.co/image/ab67616d0000b2732aa34d5906e01231eff70f82" alt="" class="rounded-md">
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-gray-900 text-sm font-semibold mb-2">You Will </h2>
+            <p class="leading-none text-xs font-bold" id=>Sweet Trip</p>
+          </div>
         </div>
       </div>
     </div>
@@ -395,85 +336,7 @@
 </section>
 <!-- End Section -->
 
-<!-- Section 5 -->
-<section class="text-gray-600 body-font max-w-7xl mx-auto">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap -mx-4 -my-8">
-      <div class="flex flex-col text-center w-full mb-20">
-        <h1 class="sm:text-3xl text-3xl font-medium title-font mb-2 text-gray-900">Discoveries</h1>
-        <br>
-        <hr class="w-20 mx-auto border-2 border-blue-400 bg-blue-400 transform transition-all duration-300 ease-in-out hover:scale-x-150">
-      </div>
-      <div class="py-8 px-4 lg:w-1/3">
-        <div class="h-full flex items-start">
-          <div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-            <span class="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">
-              <img class="h-6 mr-1 mb-0 inline" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTA5Ljg4MSA1MDkuODgxIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUwOS44ODEgNTA5Ljg4MSIgd2lkdGg9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJtMjExLjA3NyAyMTYuNDQ4aDQ1djMwaC00NXoiIHRyYW5zZm9ybT0ibWF0cml4KC43MDcgLS43MDcgLjcwNyAuNzA3IC05NS4yNDUgMjMyLjk1OCkiLz48cGF0aCBkPSJtMzk5LjA0NSAzNjUuMDk2LTI1LjA0OS0yNS4wNDljLTIxLjI3Ny0yMS4yNzctNTUuODk5LTIxLjI3OS03Ny4xODEgMGwtMTI2LjUwMSAxMjYuNTAxYy0xNy41ODcgMTcuNTg4LTQ2LjA1MSAxNy41ODgtNjMuNjM5IDBsLTIzLjIyOC0yMy4yMjhjLTEwLjY5Ni0xMC42OTYtMTEuMDY2LTI3LjQ5My0xLjczLTM4LjYzNCAxNi42ODQgNy44OTEgMzcuMjc0IDQuOTg2IDUxLjA5Ny04LjgzN2wxMi4zNDgtMTIuMzQ4YzE2Ljg3OCA4LjM1MyAzNy40MjUgNS45MDQgNTEuODQ2LTYuODE5bDE1My43MzItMTM1LjY0NmMyOS4wMjQtMS4yNjggNTYuOS0xMy45NDUgNzkuMDU5LTM2LjEwNSA0Ni43ODgtNDYuNzg4IDQ2Ljc4OC0xMjIuOTE3IDAtMTY5LjcwNi00Ni43ODctNDYuNzg4LTEyMi45MTgtNDYuNzg4LTE2OS43MDUgMC0yMi4xNjIgMjIuMTYzLTM0Ljg0NyA1MC4wNC0zNi4xMTIgNzkuMDY2bC0xMzUuNjU1IDE1My43NDNjLTEyLjg4NCAxNC42MDItMTUuMDQ0IDM1LjIxNS02LjgxMiA1MS44MzZsLTEyLjM0MSAxMi4zNDFjLTEzLjg0MyAxMy44NDUtMTYuNzU0IDM0LjUzNS04Ljc1MSA1MS4yNy0yMS4wNjMgMjIuOTkxLTIwLjUyNSA1OC43MTcgMS44MTIgODEuMDU0bDIzLjIyNyAyMy4yMjhjMjkuMzEgMjkuMzExIDc2Ljc1MyAyOS4zMTYgMTA2LjA2NiAwbDEyNi41LTEyNi41MDNjOS41ODEtOS41ODIgMjUuMTcyLTkuNTgyIDM0Ljc1NSAwbDI1LjA0OSAyNS4wNDl6bS0yODcuNDQzIDkuNTQxYy01Ljg0OSA1Ljg0OC0xNS4zNjUgNS44NDgtMjEuMjE0IDAtNS44NDktNS44NDktNS44NDktMTUuMzY1IDAtMjEuMjE0bDEwLjYwNy0xMC42MDYgMjEuMjEzIDIxLjIxNHptMjg1LjU4OS0xODEuMWMtMTMuOTc3IDEwLjM2My0yOS44NjggMTYuNDEtNDYuMTg5IDE3LjQ1MWwtOTYuOTY0LTk2Ljk2NWMxLjA0MS0xNi4zMTkgNy4wODgtMzIuMjExIDE3LjQ1MS00Ni4xODl6bTExLjM5NS0xMzcuMDk4YzMxLjQ3NyAzMS40NzYgMzQuNjk3IDgwLjY0OCA5LjcwNiAxMTUuNzcybC0xMjUuNDc4LTEyNS40NzhjMzUuMTI0LTI0Ljk5MSA4NC4yOTQtMjEuNzcgMTE1Ljc3MiA5LjcwNnptLTI5Ny43NjQgMjMxLjQ0MyAxMjguNzQyLTE0NS45MDcgODMuNDg2IDgzLjQ4NS0xNDUuODkxIDEyOC43MjhjLTYuNjYyIDUuODgtMTYuODA0IDUuNTYzLTIzLjA4OC0uNzIxbC00Mi41MjktNDIuNTI5Yy02LjI3NC02LjI3NC02LjU5MS0xNi40MDEtLjcyLTIzLjA1NnoiLz48cGF0aCBkPSJtOTAgMTQ4LjgzOHYtNzAuNTQybDM4LjE4MyAxMC4wNDggNy42MzUtMjkuMDEyLTc1LjgxOC0xOS45NTJ2NjcuMDM4Yy0yOS4yMzctMTAuMzctNjAgMTEuNDU3LTYwIDQyLjQyIDAgMjQuODEzIDIwLjE4NyA0NSA0NSA0NXM0NS0yMC4xODcgNDUtNDV6bS00NSAxNWMtOC4yNzEgMC0xNS02LjcyOS0xNS0xNXM2LjcyOS0xNSAxNS0xNSAxNSA2LjcyOSAxNSAxNS02LjcyOSAxNS0xNSAxNXoiLz48cGF0aCBkPSJtNDM1IDMzOS4yOTF2ODIuMTI3Yy0yOS4yMzctMTAuMzY5LTYwIDExLjQ1Ni02MCA0Mi40MiAwIDI0LjgxNCAyMC4xODYgNDUgNDUgNDUgMjQuODEzIDAgNDUtMjAuMTg2IDQ1LTQ1di04NS40NTNsMzcuMTE5IDkuOTQyIDcuNzYyLTI4Ljk3OXptLTE1IDEzOS41NDdjLTguMjcyIDAtMTUtNi43MjgtMTUtMTUgMC04LjI3MSA2LjcyOC0xNSAxNS0xNSA4LjI3MSAwIDE1IDYuNzI5IDE1IDE1cy02LjcyOSAxNS0xNSAxNXoiLz48L2c+PC9zdmc+" />
-            </span>
-            <span class="font-medium text-lg text-gray-800 title-font leading-none" id="discovery_artist_percent">18%</span>
-          </div>
-          <div class="flex-grow pl-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">ARTISTS</h2>
-            <h1 class="title-font text-xl font-extrabold text-gray-900 mb-3" id="discovery_artist">3 New Artists</h1>
-            <p class="leading-relaxed mb-5" id="discovery_last_artist">vs. 3 (Previous Week)</p>
-            <a class="inline-flex items-center">
-              <img alt="blog" src="https://dummyimage.com/103x103" class="w-16 h-16 rounded-md flex-shrink-0 object-cover object-center" id="discovery_top_artist_img">
-              <span class="flex-grow flex flex-col pl-3">
-                <span class="title-font font-medium text-gray-900" id="discovery_top_artist">Alper Kamu</span>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="py-8 px-4 lg:w-1/3">
-        <div class="h-full flex items-start">
-          <div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-            <span class="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">
-              <img class="h-6 mr-1 mb-0 inline" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzg5LjEyIDM4OS4xMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzg5LjEyIDM4OS4xMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxnPg0KCQkJPHBhdGggZD0iTTE5NC41NiwwQzg3LjI4MSwwLDAsODcuMjgxLDAsMTk0LjU2czg3LjI4MSwxOTQuNTYsMTk0LjU2LDE5NC41NnMxOTQuNTYtODcuMjgxLDE5NC41Ni0xOTQuNTZTMzAxLjgzOSwwLDE5NC41Niwweg0KCQkJCSBNMTk0LjU2LDM3NS40NjdjLTk5Ljc1MywwLTE4MC45MDctODEuMTU0LTE4MC45MDctMTgwLjkwN1M5NC44MDcsMTMuNjUzLDE5NC41NiwxMy42NTNTMzc1LjQ2Nyw5NC44MDcsMzc1LjQ2NywxOTQuNTYNCgkJCQlTMjk0LjMxMywzNzUuNDY3LDE5NC41NiwzNzUuNDY3eiIvPg0KCQkJPHBhdGggZD0iTTE5NC41NiwxNTAuMTg3Yy0yNC40NjcsMC00NC4zNzMsMTkuOTA3LTQ0LjM3Myw0NC4zNzNjMCwyNC40NjcsMTkuOTA3LDQ0LjM3Myw0NC4zNzMsNDQuMzczDQoJCQkJYzI0LjQ2NywwLDQ0LjM3My0xOS45MDcsNDQuMzczLTQ0LjM3M0MyMzguOTMzLDE3MC4wOTMsMjE5LjAyNywxNTAuMTg3LDE5NC41NiwxNTAuMTg3eiBNMTk0LjU2LDIyNS4yOA0KCQkJCWMtMTYuOTQsMC0zMC43Mi0xMy43OC0zMC43Mi0zMC43MnMxMy43OC0zMC43MiwzMC43Mi0zMC43MnMzMC43MiwxMy43OCwzMC43MiwzMC43MlMyMTEuNSwyMjUuMjgsMTk0LjU2LDIyNS4yOHoiLz4NCgkJPC9nPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8Zz4NCgkJCTxwYXRoIGQ9Ik0xOTQuNTYsMTIyLjg4Yy0zOS41MjYsMC03MS42OCwzMi4xNTQtNzEuNjgsNzEuNjhzMzIuMTU0LDcxLjY4LDcxLjY4LDcxLjY4czcxLjY4LTMyLjE1NCw3MS42OC03MS42OA0KCQkJCVMyMzQuMDg2LDEyMi44OCwxOTQuNTYsMTIyLjg4eiBNMTk0LjU2LDI1Mi41ODdjLTMxLjk5MywwLTU4LjAyNy0yNi4wMzQtNTguMDI3LTU4LjAyN3MyNi4wMzQtNTguMDI3LDU4LjAyNy01OC4wMjcNCgkJCQlzNTguMDI3LDI2LjAzNCw1OC4wMjcsNTguMDI3UzIyNi41NTMsMjUyLjU4NywxOTQuNTYsMjUyLjU4N3oiLz4NCgkJCTxwYXRoIGQ9Ik0xOTQuNTYsMTUwLjE4N2MtMjQuNDY3LDAtNDQuMzczLDE5LjkwNy00NC4zNzMsNDQuMzczYzAsMjQuNDY3LDE5LjkwNyw0NC4zNzMsNDQuMzczLDQ0LjM3Mw0KCQkJCWMyNC40NjcsMCw0NC4zNzMtMTkuOTA3LDQ0LjM3My00NC4zNzNDMjM4LjkzMywxNzAuMDkzLDIxOS4wMjcsMTUwLjE4NywxOTQuNTYsMTUwLjE4N3ogTTE5NC41NiwyMjUuMjgNCgkJCQljLTE2Ljk0LDAtMzAuNzItMTMuNzgtMzAuNzItMzAuNzJzMTMuNzgtMzAuNzIsMzAuNzItMzAuNzJzMzAuNzIsMTMuNzgsMzAuNzIsMzAuNzJTMjExLjUsMjI1LjI4LDE5NC41NiwyMjUuMjh6Ii8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggZD0iTTEyMC4zMDUsNTguNTA4Yy0xLjkzMi0zLjI0MS02LjEyLTQuMzA4LTkuMzU5LTIuMzc0Qzc2LjU1OSw3Ni42MDcsNTEuNDk0LDEwOC45NDcsNDAuMzY2LDE0Ny4yDQoJCQljLTEuMDUzLDMuNjIsMS4wMjcsNy40MDcsNC42NDcsOC40NmMwLjYzMywwLjE4NiwxLjI4LDAuMjczLDEuOTA2LDAuMjczYzIuOTYxLDAsNS42ODctMS45MzQsNi41NS00LjkxOQ0KCQkJYzEwLjE2MS0zNC45MiwzMy4wNTUtNjQuNDU0LDY0LjQ2MS04My4xNDdDMTIxLjE3Miw2NS45NCwxMjIuMjMxLDYxLjc0NywxMjAuMzA1LDU4LjUwOHoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
-            </span>
-            <span class="font-medium text-lg text-gray-800 title-font leading-none" id="discovery_album_percent">81%</span>
-          </div>
-          <div class="flex-grow pl-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">ALBUMS</h2>
-            <h1 class="title-font text-xl font-extrabold text-gray-900 mb-3" id="discovery_album">12 New Albums</h1>
-            <p class="leading-relaxed mb-5" id="discovery_last_album">vs. 10 (Previous Week)</p>
-            <a class="inline-flex items-center">
-              <img alt="blog" src="https://dummyimage.com/102x102" class="w-16 h-16 rounded-md flex-shrink-0 object-cover object-center" id="discovery_top_album_img">
-              <span class="flex-grow flex flex-col pl-3">
-                <span class="title-font font-medium text-gray-900" id="discovery_top_album">Holden Caulfield</span>
-                <span class="text-xs font-bold text-gray-900" id="discovery_top_album_artist">Holden Caulfield</span>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="py-8 px-4 lg:w-1/3">
-        <div class="h-full flex items-start">
-          <div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-            <span class="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">
-              <img class="h-6 mr-1 inline" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0yMDkuMjk3LDEwNi40N2MtMjcuMDQxLTE5LjgxOS01NC43ODUtNDQuMjQ2LTc0LjUzMS03My44NjVMMTE3LjQ4LDYuNjc3Yy0zLjY2Mi01LjQ5My0xMC40ODgtNy45MzktMTYuODMxLTYuMDM1DQoJCQlDOTQuMzIxLDIuNTYxLDkwLDguMzkxLDkwLDE0Ljk5OHYyMzUuMzQ0Yy04Ljg2LTUuMTY3LTE5LjAyMy04LjM0NC0zMC04LjM0NGMtMzMuMDkxLDAtNjAsMjYuOTA5LTYwLDYwDQoJCQljMCwzMy4wOTEsMjYuOTA5LDU5Ljk5OSw2MCw1OS45OTlzNjAtMjYuOTA5LDYwLTYwVjY0LjI0OWMyMS4xOTYsMjYuNzkyLDQ3LjcxLDQ4LjkzLDcxLjU1OCw2Ni40Mg0KCQkJQzIwMy4yNzYsMTM5LjI1MywyMTAsMTUyLjQ5NiwyMTAsMTY2Ljk5N2MwLDI0LjgxNC0yMC4xODYsNDUtNDUsNDVjLTguMjkxLDAtMTUsNi43MDktMTUsMTVjMCw4LjI5MSw2LjcwOSwxNSwxNSwxNQ0KCQkJYzQxLjM1MywwLDc1LTMzLjY0Nyw3NS03NUMyNDAsMTQzLjE5MywyMjguNTMsMTIwLjU3NiwyMDkuMjk3LDEwNi40N3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggZD0iTTQ5Mi44ODQsMTIyLjU2OWwtMjEyLDYwYy02LjQ0NSwxLjg0Ni0xMC44ODQsNy43MzQtMTAuODg0LDE0LjQyOXYyMDMuMzQ0Yy04Ljg2LTUuMTY3LTE5LjAyMy04LjM0NC0zMC04LjM0NA0KCQkJYy0zMy4wOTEsMC02MCwyNi45MDktNjAsNjBzMjYuOTA5LDYwLDYwLDYwczYwLTI2LjkwOSw2MC02MGMwLTMuNDIsMC0xODMuNjgsMC0xODMuNjhsMTgyLTUxLjQyOXYxMjMuNDUzDQoJCQljLTguODYtNS4xNjctMTkuMDIzLTguMzQ0LTMwLTguMzQ0Yy0zMy4wOTEsMC02MCwyNi45MDktNjAsNjBzMjYuOTA5LDYwLDYwLDYwczYwLTI2LjkwOSw2MC02MGMwLTMuNDIsMC0yNTUsMC0yNTUNCgkJCUM1MTIsMTI3LjA3Nyw1MDIuNTEsMTE5Ljg1LDQ5Mi44ODQsMTIyLjU2OXoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
-            </span>
-            <span class="font-medium text-lg text-gray-800 title-font leading-none" id="discovery_track_percent">56%</span>
-          </div>
-          <div class="flex-grow pl-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">TRACKS</h2>
-            <h1 class="title-font text-xl font-extrabold text-gray-900 mb-3" id="discovery_track">40 New Tracks</h1>
-            <p class="leading-relaxed mb-5"  id="discovery_last_track">vs. 12 (Previous Week)</p>
-            <a class="inline-flex items-center">
-              <img alt="blog" src="https://dummyimage.com/131x101" class="w-16 h-16 rounded-md flex-shrink-0 object-cover object-center" id="discovery_top_track_img">
-              <span class="flex-grow flex flex-col pl-3">
-                <span class="title-font font-medium text-gray-900" id="discovery_top_track">Henry Letham</span>
-                <span class="text-xs font-bold text-gray-900" id="discovery_top_track_artist">Henry Letham</span>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Section 6 -->
+<!-- Section 4 -->
 <!-- <section class="bg-white">
     <div class="w-full px-5 py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl">
 
@@ -572,7 +435,7 @@
     </div>
 </section> -->
 
-<!-- Section 7 -->
+<!-- Section 5 -->
 <!-- <section class="py-24 bg-white">
     <div class="px-8 mx-auto max-w-7xl lg:px-16">
         <h2 class="mb-4 text-xl font-bold md:text-3xl">Frequently Asked Questions</h2>
@@ -608,10 +471,10 @@
     </div>
 </section> -->
 
-<!-- Section Footer -->
+<!-- Section 6 -->
 <section class="text-gray-700 bg-white body-font">
     <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
-        <a class="text-xl font-black leading-none text-gray-900 select-none logo"><span class="text-red-600">last </span> + <span class="text-green-600">spotify</span><span class="text-indigo-600">.</span></a>
+        <a class="text-xl font-black leading-none text-gray-900 select-none logo">ahmad<span class="text-indigo-600">.</span></a>
         <p class="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">© 2021 Music Analysis by Ahmad
         </p>
         <span class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start hidden">
@@ -652,13 +515,6 @@
         </span>
     </div>
 </section>
-
-<span id="listen1" class="hidden"></span>
-<span id="listen2" class="hidden"></span>
-<span id="avg1" class="hidden"></span>
-<span id="avg2" class="hidden"></span>
-<span id="scrobble1" class="hidden"></span>
-<span id="scrobble2" class="hidden"></span>
 
 <!-- AlpineJS Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>

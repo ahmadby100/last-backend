@@ -1,0 +1,13 @@
+ /* @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+ @tailwind screens; */
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+/* .track-order-rank {
+  @apply title-font text-md font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline;
+
+} */

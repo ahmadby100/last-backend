@@ -4,7 +4,8 @@
   "description": "An analysis of Spotify Scrobbles with data gathered from Last.fm",
   "main": "main.js",
   "scripts": {
-    "test": "firebase serve"
+    "test": "firebase serve",
+    "postcss": "postcss static/css/main.css -o static/css/out.css"
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,14 @@
   },
   "homepage": "https://github.com/ahmadby100/last-spotify#readme",
   "dependencies": {
+    "chart.js": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
     "autoprefixer": "^10.2.6",
-    "chart.js": "^3.3.2",
     "postcss": "^8.3.0",
-    "tailwindcss": "^2.1.4"
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.4",
+    "tailwindcss-dark-mode": "^1.1.7"
   }
 }

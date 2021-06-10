@@ -1,3 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
 .dropdown:hover .dropdown-menu {
-    display: block;
-  }
+  display: block;
+};
+
+.top-played-rank-box {
+  @apply h-28 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-sm mb-0.5
+};
+
+.top-played-rank-no {
+  @apply font-bold text-gray-900 mb-0.5 mt-1.5 mr-1 inline ml-0;
+}

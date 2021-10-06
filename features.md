@@ -1,3 +1,6 @@
+- Add Search Function for tracks
+    - Show information about Track
+    - Plays, First Listened, Rank, Liked?, etc.
 - ~~Top 5/10 from year/month/week~~
     - [x] Artist 
     - [x] Album
